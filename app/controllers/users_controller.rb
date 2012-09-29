@@ -5,16 +5,20 @@ class UsersController < ApplicationController
   end
 
   def new
-  	@user = User.new
+  	@user = User.new # in order to generate sign-up form by form_for(@user)
   end
 
   def create
     @user = User.new(params[:user])
     if @user.save
- 	  flash[:success] = "successful registration"    	
+      sign_in @user
+ 	    flash[:success] = "Welcome to the Sample App!"
       redirect_to @user
     else
       render 'new'
     end
+  end
+
+  def index
   end
 end

@@ -8,9 +8,9 @@
 #User.create!(name: "A Nother", email: "another@example.org", password:"123456",password_confirmation:"123456")
 
 
-50.times do |person|
-	User.create!(name:"Person_"+(person+1).to_s,
-				 email:('a'..'z').to_a.shuffle[1..7].join + '@gmail.com' ,
-				 password:"123456",
-				 password_confirmation:"123456")
-end
+# 50.times do |person|
+# 	User.create!(name:"Person_"+(person+1).to_s,
+# 				 email:('a'..'z').to_a.shuffle[1..7].join + '@gmail.com' ,
+# 				 password:"123456",
+# 				 password_confirmation:"123456")
+# end
