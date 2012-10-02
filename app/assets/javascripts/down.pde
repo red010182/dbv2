@@ -8,7 +8,7 @@
  
 int numBalls = 12;
 float spring = 0.05;
-float gravity = 0.03;
+float gravity = 0.06;
 float friction = -0.9;
 Ball[] balls = new Ball[numBalls];
 
@@ -60,16 +60,18 @@ class Ball {
       float dy = others[i].y - y;
       float distance = sqrt(dx*dx + dy*dy);
       float minDist = others[i].diameter/2 + diameter/2;
-      if (distance < minDist) { 
+      flot mass_other = others[i].diameter * others[i].diameter;
+      flot mass = diameter * diameter;
+      if (distance < minDist) {
         float angle = atan2(dy, dx);
         float targetX = x + cos(angle) * minDist;
         float targetY = y + sin(angle) * minDist;
         float ax = (targetX - others[i].x) * spring;
         float ay = (targetY - others[i].y) * spring;
-        vx -= ax;
-        vy -= ay;
-        others[i].vx += ax;
-        others[i].vy += ay;
+        vx -= ax * mass_other / mass;
+        vy -= ay * mass_other / mass;
+        others[i].vx += ax * mass / mass_other;
+        others[i].vy += ay * mass / mass_other;
       }
     }   
   }
