@@ -6,5 +6,5 @@
 	
 	The keypoint is that I build the authentication system from groud up, using Rails' built-in has_secure_password function. 
 
-	The other experiments was using processing to generate javascript cancas embedded in homepage, which is the Bouncy Bubbles originally written by others and was improved by me to introduce the mass concept, or inertia technically, in the colletion part (Big balls move slower than small balls after they collided eath other). 
+	The other experiments was using processing to generate javascript canvas embedded in homepage, which is the Bouncy Bubbles originally written by others and was improved by me to introduce the mass concept, or "inertia" technically, in the colletion part (Big balls move slower than small balls after they collided eath other). 
 
